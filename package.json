@@ -7,24 +7,29 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compile_@agm_core": "babel node_modules/@agm/core -d node_modules/@agm/core --presets es2015",
+    "postinstall": "npm run compile_@agm_core"
   },
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.2",
     "@angular/animations": "^6.0.2",
-    "@angular/cdk": "^6.0.2",
+    "@angular/cdk": "^6.1.0",
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
     "@angular/core": "^6.0.2",
     "@angular/forms": "^6.0.2",
     "@angular/http": "^6.0.2",
-    "@angular/material": "^6.0.2",
+    "@angular/material": "^6.1.0",
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
+    "rxjs-compat": "^6.1.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

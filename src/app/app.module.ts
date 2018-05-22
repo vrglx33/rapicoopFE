@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,12 +20,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
   { path: 'startService',  component: StartServiceComponent },
   { path: 'stopService',  component: StopServiceComponent },
 ];
+const googleMapsCore = AgmCoreModule.forRoot({
+  apiKey : 'AIzaSyCgf8YhUNJstXTQhxJVHHDQ6J2sqWstumI',
+});
 
 @NgModule({
   declarations: [
@@ -40,13 +45,11 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     MaterialModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCgf8YhUNJstXTQhxJVHHDQ6J2sqWstumI'
-    }),
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     HttpModule,
+    googleMapsCore,
   ],
   providers: [
     HttpClientModule,
