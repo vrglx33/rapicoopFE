@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/home">
+    <mat-icon>
+      home
+    </mat-icon>
+    {{ menuItems.home }}
+  </button>
+  <button mat-button routerLink="/startService">
+    <mat-icon>
+      play_arrow
+    </mat-icon>
+    {{ menuItems.startTracking }}
+  </button>
+  <button mat-button routerLink="/stopService">
+    <mat-icon>
+      stop
+    </mat-icon>
+    {{ menuItems.stopTracking }}
+  </button>
+</mat-toolbar>
